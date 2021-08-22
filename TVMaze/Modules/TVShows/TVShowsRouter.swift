@@ -10,7 +10,7 @@ import UIKit
 import tvmaze_network
 import RxSwift
 
-final class TVShowsRouter: RouterProtocol {
+final class TVShowsRouter: NSObject, RouterProtocol {
     internal weak var viewController: UIViewController?
 
     var detail: PublishSubject<Show> = PublishSubject()
@@ -18,6 +18,7 @@ final class TVShowsRouter: RouterProtocol {
     private let disposeBag = DisposeBag()
     
     required init(viewController: UIViewController) {
+        super.init()
         self.viewController = viewController
         binds()
     }
@@ -29,6 +30,8 @@ final class TVShowsRouter: RouterProtocol {
     }
     
     private func pushToDetail(with show: Show) {
-        
+        let controller = TVShowDetailBuilder.build(with: TVShowDetailViewModelDataSource(context: Context(), show: show))
+        controller.transitioningDelegate = self
+        viewController?.navigationController?.present(controller, animated: true, completion: nil)
     }
 }
