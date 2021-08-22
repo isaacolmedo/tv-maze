@@ -9,11 +9,14 @@ import UIKit
 import RxSwift
 import SDWebImage
 
-class TVShowDetailViewController: UIViewController, ViewControllerProtocol {
+final class TVShowDetailViewController: UIViewController, ViewControllerProtocol {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var coverImageView: UIImageView!
-    @IBOutlet weak var resumeLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var coverImageView: UIImageView!
+    @IBOutlet private weak var resumeLabel: UILabel!
+    
+    @IBOutlet private weak var closeButton: UIButton!
+    
     
     private var viewModel: TVShowDetailViewModel!
     private var disposeBag = DisposeBag()
@@ -35,6 +38,11 @@ class TVShowDetailViewController: UIViewController, ViewControllerProtocol {
         }.disposed(by: disposeBag)
         viewModel.title.bind(to: titleLabel.rx.text).disposed(by: disposeBag)
         viewModel.resume.bind(to: resumeLabel.rx.attributedText).disposed(by: disposeBag)
+        
+        closeButton.rx.tap.subscribe { [weak self] _ in
+            self?.dismiss(animated: true, completion: nil)
+        }.disposed(by: disposeBag)
+
     }
 }
 

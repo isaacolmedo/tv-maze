@@ -37,26 +37,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWy-6q-8ss">
-                                <rect key="frame" x="17" y="52" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWy-6q-8ss">
+                                <rect key="frame" x="8" y="52" width="44" height="30"/>
                                 <state key="normal" title="Cerrar"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="mWy-6q-8ss" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="630-hZ-CIh"/>
                             <constraint firstItem="cj9-Ht-Tt2" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="6rT-qJ-N11"/>
+                            <constraint firstItem="mWy-6q-8ss" firstAttribute="centerY" secondItem="m2P-Em-Vsd" secondAttribute="centerY" id="AGv-ow-xVk"/>
                             <constraint firstItem="bhQ-uQ-b15" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Bar-i6-ivq"/>
                             <constraint firstItem="cj9-Ht-Tt2" firstAttribute="top" secondItem="m2P-Em-Vsd" secondAttribute="bottom" constant="16" id="Bk0-67-8RF"/>
                             <constraint firstItem="m2P-Em-Vsd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="BuA-og-ef8"/>
                             <constraint firstItem="m2P-Em-Vsd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="GQq-KU-iPW"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="m2P-Em-Vsd" secondAttribute="trailing" constant="8" id="Hl0-zJ-Xn7"/>
+                            <constraint firstItem="mWy-6q-8ss" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="XcY-Rm-ylF"/>
                             <constraint firstItem="bhQ-uQ-b15" firstAttribute="top" secondItem="cj9-Ht-Tt2" secondAttribute="bottom" constant="16" id="iEz-wd-ssX"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bhQ-uQ-b15" secondAttribute="trailing" constant="16" id="wTf-ww-eS4"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="mWy-6q-8ss" id="4XT-Cb-zzh"/>
                         <outlet property="coverImageView" destination="cj9-Ht-Tt2" id="ifZ-tj-ibD"/>
                         <outlet property="resumeLabel" destination="bhQ-uQ-b15" id="l5g-n3-jQS"/>
                         <outlet property="titleLabel" destination="m2P-Em-Vsd" id="FwB-Xb-my5"/>

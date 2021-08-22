@@ -18,6 +18,7 @@ class TVMazeTabBarViewController: UITabBarController {
         super.init(nibName: nil, bundle: nil)
         viewControllers = [tabs.shows, tabs.favorites]
         tabBar.tintColor = .primary
+        tabBar.isTranslucent = false
     }
     
     required init?(coder: NSCoder) {
