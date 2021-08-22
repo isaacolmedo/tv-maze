@@ -39,13 +39,16 @@ final class TVFavoriteShowsViewModel: TableViewShowsDecorator {
         like.subscribe { (isLike, id) in
             UserDefaults.standard.setValue(isLike, forKey: "\(id)")
         }.disposed(by: disposeBag)
+        
+        itemSelected.subscribe(router.detail).disposed(by: disposeBag)
     }
     
     func fetchShows() {
         api.fetchShows().asObservable().subscribe(onNext: { [weak self] shows in
             self?.items.onNext(shows.filter { UserDefaults.standard.bool(forKey: "\($0.id)") })
-        }, onError: { error in
-            debugPrint("Show error")
+        }, onError: { [weak self] error in
+            guard let self = self else { return }
+            self.router.showDefaultAlertError(acceptAction: self.fetchShows)
         }).disposed(by: disposeBag)
     }
     
@@ -57,7 +60,12 @@ final class TVFavoriteShowsViewModel: TableViewShowsDecorator {
 //MARK:- LIKEABLE
 extension TVFavoriteShowsViewModel {
     func remove(at index: Int) {
-        items.onNext(staticItems)
+        let show = staticItems[index]
+        let acceptAction: AcceptAction = {
+            UserDefaults.standard.setValue(false, forKey: "\(show.id)")
+            self.fetchShows()
+        }
+        self.router.showAlert(title: "TVMaze", message: "¿Eliminar \(show.title) de favoritos?", actions: [.accept(action: acceptAction), .cancel])
     }
 }
 

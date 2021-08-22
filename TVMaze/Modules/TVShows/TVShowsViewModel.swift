@@ -8,6 +8,7 @@
 import tvmaze_network
 import RxSwift
 import Foundation
+import UIKit
 
 struct TVShowsViewModelDataSource: ViewModelDataSourceProtocol {
     var context: Context
@@ -45,8 +46,9 @@ final class TVShowsViewModel: ViewModelProtocol, TableViewShowsDecorator, Likeab
     func fetchShows() {
         api.fetchShows().asObservable().subscribe(onNext: {  [weak self] shows in
             self?.items.onNext(shows)
-        }, onError: { error in
-            debugPrint("Show error")
+        }, onError: { [weak self] error in
+            guard let self = self else { return }
+            self.router.showDefaultAlertError(acceptAction: self.fetchShows)
         }).disposed(by: disposeBag)
     }
     

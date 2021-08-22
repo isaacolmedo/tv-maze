@@ -95,15 +95,6 @@ extension TVShowItemTableViewCell {
 extension UIView {
 
     func setCardView(){
-//        layer.cornerRadius = 5.0
-//        layer.borderColor  =  UIColor.clear.cgColor
-//        layer.borderWidth = 5.0
-//        layer.shadowOpacity = 0.5
-//        layer.shadowColor =  UIColor.lightGray.cgColor
-//        layer.shadowRadius = 5.0
-//        layer.shadowOffset = CGSize(width:5, height: 5)
-//        layer.masksToBounds = true
-//
         layer.cornerRadius = 10.0
         layer.shadowColor = UIColor.lightGray.cgColor//UIColor.primary.withAlphaComponent(0.5).cgColor
         layer.shadowOffset = CGSize(width: 0.0, height: 0.0)

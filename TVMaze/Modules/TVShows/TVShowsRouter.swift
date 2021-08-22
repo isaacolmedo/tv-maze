@@ -12,7 +12,7 @@ import RxSwift
 
 final class TVShowsRouter: NSObject, RouterProtocol {
     internal weak var viewController: UIViewController?
-
+    
     var detail: PublishSubject<Show> = PublishSubject()
     
     private let disposeBag = DisposeBag()
@@ -31,7 +31,6 @@ final class TVShowsRouter: NSObject, RouterProtocol {
     
     private func pushToDetail(with show: Show) {
         let controller = TVShowDetailBuilder.build(with: TVShowDetailViewModelDataSource(context: Context(), show: show))
-        controller.transitioningDelegate = self
         viewController?.navigationController?.present(controller, animated: true, completion: nil)
     }
 }
