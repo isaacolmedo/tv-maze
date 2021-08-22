@@ -8,14 +8,18 @@
 import UIKit
 import RxSwift
 import SDWebImage
+import Lottie
 
 final class TVShowDetailViewController: UIViewController, ViewControllerProtocol {
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var coverImageView: UIImageView!
     @IBOutlet private weak var resumeLabel: UILabel!
-    
     @IBOutlet private weak var closeButton: UIButton!
+    @IBOutlet private weak var likeButton: AnimatedButton!
+    
+    @IBOutlet weak var mdbmButton: UIButton!
+    @IBOutlet weak var bottomDBDMButton: UIView!
     
     
     private var viewModel: TVShowDetailViewModel!
@@ -30,6 +34,8 @@ final class TVShowDetailViewController: UIViewController, ViewControllerProtocol
         coverImageView.layer.shadowOpacity = 0.5
         coverImageView.layer.shadowOffset = CGSize(width:5, height: 5)
         binds()
+        configureLikeButton()
+        configureIMDBButton()
     }
     
     func binds() {
@@ -42,7 +48,38 @@ final class TVShowDetailViewController: UIViewController, ViewControllerProtocol
         closeButton.rx.tap.subscribe { [weak self] _ in
             self?.dismiss(animated: true, completion: nil)
         }.disposed(by: disposeBag)
+        
+        viewModel.idbmIsHidden.bind(to: mdbmButton.rx.isHidden).disposed(by: disposeBag)
+        viewModel.idbmIsHidden.bind(to: bottomDBDMButton.rx.isHidden).disposed(by: disposeBag)
+    }
+    
+    private func configureLikeButton()  {
+        likeButton.animation = Animation.named("like")
+        likeButton.clipsToBounds = false
 
+        likeButton.setPlayRange(fromMarker: "touchDownStart",
+                                   toMarker: "touchDownEnd",
+                                   event: .touchDown)
+
+        likeButton.setPlayRange(fromMarker: "touchDownEnd",
+                                   toMarker: "touchUpCancel",
+                                   event: .touchUpOutside)
+
+        likeButton.setPlayRange(fromMarker: "touchDownEnd",
+                                   toMarker: "touchUpEnd",
+                                   event: .touchUpInside)
+        
+        likeButton.addTarget(self, action: #selector(likeAction), for: .touchUpInside)
+    }
+    
+    private func configureIMDBButton() {
+        mdbmButton.tintColor = .primary
+        bottomDBDMButton.backgroundColor = .primary
+        mdbmButton.rx.tap.subscribe(viewModel.idbm).disposed(by: disposeBag)
+    }
+    
+    @objc private func likeAction() {
+        
     }
 }
 

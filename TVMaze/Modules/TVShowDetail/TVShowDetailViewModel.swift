@@ -23,6 +23,8 @@ final class TVShowDetailViewModel: ViewModelProtocol {
     let imageURL: BehaviorSubject<URL> = BehaviorSubject(value: URL(string: "www.google.com")!)
     let title: BehaviorSubject<String> = BehaviorSubject(value: "")
     let resume: BehaviorSubject<NSAttributedString> = BehaviorSubject(value: NSAttributedString())
+    let idbm: PublishSubject<Void> = PublishSubject()
+    let idbmIsHidden: BehaviorSubject<Bool> = BehaviorSubject(value: false)
  
     init(dataSource: TVShowDetailViewModelDataSource, router: TVShowDetailRouter) {
         self.dataSource = dataSource
@@ -37,5 +39,12 @@ final class TVShowDetailViewModel: ViewModelProtocol {
         }
         title.onNext(show.name)
         resume.onNext(show.summary.htmlToAttributedString)
+        
+        idbm.subscribe { [weak self] _ in
+            guard let self = self, let imdb = self.show.externals?.imdb else { return }
+            self.router.openimdb(with: "https://www.imdb.com/title/\(imdb)/")
+        }.disposed(by: disposeBag)
+
+        idbmIsHidden.onNext(show.externals?.imdb == nil)
     }
 }

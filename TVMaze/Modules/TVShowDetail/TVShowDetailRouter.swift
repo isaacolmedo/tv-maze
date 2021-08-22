@@ -14,4 +14,10 @@ final class TVShowDetailRouter: RouterProtocol {
     required init(viewController: UIViewController) {
         self.viewController = viewController
     }
+    
+    func openimdb(with imdb: String) {
+        if let url = URL(string: imdb) {
+            UIApplication.shared.open(url)
+        }
+    }
 }
