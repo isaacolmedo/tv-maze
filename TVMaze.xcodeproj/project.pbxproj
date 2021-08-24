@@ -1,0 +1,910 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0547E3C426D1BAFE004CB20E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0547E3C326D1BAFE004CB20E /* Lottie */; };
+		0547E3C726D1BBEF004CB20E /* like.json in Resources */ = {isa = PBXBuildFile; fileRef = 0547E3C626D1BBEF004CB20E /* like.json */; };
+		0547E3D126D201C7004CB20E /* TVFavoriteShowsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547E3D026D201C7004CB20E /* TVFavoriteShowsBuilder.swift */; };
+		0547E3D326D201CE004CB20E /* TVFavoriteShowsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547E3D226D201CE004CB20E /* TVFavoriteShowsRouter.swift */; };
+		0547E3D526D201D5004CB20E /* TVFavoriteShowsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547E3D426D201D5004CB20E /* TVFavoriteShowsViewModel.swift */; };
+		0547E3D826D20A7C004CB20E /* TVMazeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547E3D726D20A7C004CB20E /* TVMazeViewController.swift */; };
+		0547E3DC26D20B10004CB20E /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547E3DB26D20B10004CB20E /* TabBarBuilder.swift */; };
+		0547E3DE26D20B65004CB20E /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547E3DD26D20B65004CB20E /* TabBarRouter.swift */; };
+		054A98F326D22C22009F0938 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 054A98F226D22C22009F0938 /* Color.xcassets */; };
+		054A98F526D22C99009F0938 /* TVMaze+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A98F426D22C99009F0938 /* TVMaze+Colors.swift */; };
+		054A98F826D2379F009F0938 /* TVFavoriteShowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A98F726D2379F009F0938 /* TVFavoriteShowTests.swift */; };
+		054A98FB26D23890009F0938 /* TVFavoriteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A98FA26D23890009F0938 /* TVFavoriteViewModelTests.swift */; };
+		054A98FE26D23DCE009F0938 /* TVShowsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054A98FD26D23DCE009F0938 /* TVShowsViewModelTests.swift */; };
+		0594259826D28963003A47F4 /* UIViewController+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0594259726D28963003A47F4 /* UIViewController+Common.swift */; };
+		0594259A26D28F12003A47F4 /* String+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0594259926D28F12003A47F4 /* String+HTML.swift */; };
+		05C490E426D24ECB0072DDC0 /* TVShowDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C490E326D24ECB0072DDC0 /* TVShowDetailViewModel.swift */; };
+		05C490E626D24EEB0072DDC0 /* TVShowDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C490E526D24EEB0072DDC0 /* TVShowDetailViewController.swift */; };
+		05C490E826D24F0C0072DDC0 /* TVShowDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05C490E726D24F0C0072DDC0 /* TVShowDetailViewController.storyboard */; };
+		05C490EA26D270A20072DDC0 /* TVShowDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C490E926D270A20072DDC0 /* TVShowDetailBuilder.swift */; };
+		05C490EC26D270AF0072DDC0 /* TVShowDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C490EB26D270AF0072DDC0 /* TVShowDetailRouter.swift */; };
+		05C490EE26D27A8C0072DDC0 /* TVShowsRouter+TransitiononingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C490ED26D27A8C0072DDC0 /* TVShowsRouter+TransitiononingDelegate.swift */; };
+		05EFD53E26D00B90005D268F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFD53D26D00B90005D268F /* AppDelegate.swift */; };
+		05EFD54226D00B90005D268F /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFD54126D00B90005D268F /* LaunchViewController.swift */; };
+		05EFD54526D00B91005D268F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05EFD54326D00B91005D268F /* Main.storyboard */; };
+		05EFD54726D00B98005D268F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05EFD54626D00B98005D268F /* Assets.xcassets */; };
+		05EFD54A26D00B98005D268F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05EFD54826D00B98005D268F /* LaunchScreen.storyboard */; };
+		05EFD55526D00B98005D268F /* TVShowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFD55426D00B98005D268F /* TVShowTests.swift */; };
+		05EFD56026D00B98005D268F /* TVMazeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFD55F26D00B98005D268F /* TVMazeUITests.swift */; };
+		05EFD57026D00EE4005D268F /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFD56F26D00EE4005D268F /* Builder.swift */; };
+		05EFD57226D00EF8005D268F /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFD57126D00EF8005D268F /* Context.swift */; };
+		05EFD57426D00F18005D268F /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFD57326D00F18005D268F /* RouterProtocol.swift */; };
+		05EFD57626D00F30005D268F /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFD57526D00F30005D268F /* ViewControllerProtocol.swift */; };
+		05EFD57826D00F4A005D268F /* ViewModelDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFD57726D00F4A005D268F /* ViewModelDataSourceProtocol.swift */; };
+		05EFD57A26D00F5F005D268F /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFD57926D00F5F005D268F /* ViewModelProtocol.swift */; };
+		05EFD57E26D010C1005D268F /* tvmaze-network in Frameworks */ = {isa = PBXBuildFile; productRef = 05EFD57D26D010C1005D268F /* tvmaze-network */; };
+		05EFD58126D0831A005D268F /* TVShowsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFD58026D0831A005D268F /* TVShowsBuilder.swift */; };
+		05EFD58326D08324005D268F /* TVShowsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFD58226D08324005D268F /* TVShowsRouter.swift */; };
+		05EFD58526D08331005D268F /* TVShowsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFD58426D08331005D268F /* TVShowsViewModel.swift */; };
+		05EFD58726D0836A005D268F /* TVShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFD58626D0836A005D268F /* TVShowsViewController.swift */; };
+		05EFD58926D08376005D268F /* TVShowsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05EFD58826D08376005D268F /* TVShowsViewController.storyboard */; };
+		05EFD59026D08662005D268F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 05EFD58F26D08662005D268F /* RxSwift */; };
+		05EFD59426D08662005D268F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 05EFD59326D08662005D268F /* RxCocoa */; };
+		05EFD59B26D09684005D268F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 05EFD59A26D09684005D268F /* SDWebImage */; };
+		05EFD59E26D09F60005D268F /* TVShowItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EFD59C26D09F60005D268F /* TVShowItemTableViewCell.swift */; };
+		05EFD59F26D09F60005D268F /* TVShowItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05EFD59D26D09F60005D268F /* TVShowItemTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05EFD55126D00B98005D268F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05EFD53226D00B90005D268F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05EFD53926D00B90005D268F;
+			remoteInfo = TVMaze;
+		};
+		05EFD55C26D00B98005D268F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05EFD53226D00B90005D268F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05EFD53926D00B90005D268F;
+			remoteInfo = TVMaze;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0547E3C626D1BBEF004CB20E /* like.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = like.json; sourceTree = "<group>"; };
+		0547E3D026D201C7004CB20E /* TVFavoriteShowsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVFavoriteShowsBuilder.swift; sourceTree = "<group>"; };
+		0547E3D226D201CE004CB20E /* TVFavoriteShowsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVFavoriteShowsRouter.swift; sourceTree = "<group>"; };
+		0547E3D426D201D5004CB20E /* TVFavoriteShowsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVFavoriteShowsViewModel.swift; sourceTree = "<group>"; };
+		0547E3D726D20A7C004CB20E /* TVMazeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeViewController.swift; sourceTree = "<group>"; };
+		0547E3DB26D20B10004CB20E /* TabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
+		0547E3DD26D20B65004CB20E /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		054A98F226D22C22009F0938 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		054A98F426D22C99009F0938 /* TVMaze+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TVMaze+Colors.swift"; sourceTree = "<group>"; };
+		054A98F726D2379F009F0938 /* TVFavoriteShowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVFavoriteShowTests.swift; sourceTree = "<group>"; };
+		054A98FA26D23890009F0938 /* TVFavoriteViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVFavoriteViewModelTests.swift; sourceTree = "<group>"; };
+		054A98FD26D23DCE009F0938 /* TVShowsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsViewModelTests.swift; sourceTree = "<group>"; };
+		0594259726D28963003A47F4 /* UIViewController+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Common.swift"; sourceTree = "<group>"; };
+		0594259926D28F12003A47F4 /* String+HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTML.swift"; sourceTree = "<group>"; };
+		05C490E326D24ECB0072DDC0 /* TVShowDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetailViewModel.swift; sourceTree = "<group>"; };
+		05C490E526D24EEB0072DDC0 /* TVShowDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetailViewController.swift; sourceTree = "<group>"; };
+		05C490E726D24F0C0072DDC0 /* TVShowDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TVShowDetailViewController.storyboard; sourceTree = "<group>"; };
+		05C490E926D270A20072DDC0 /* TVShowDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetailBuilder.swift; sourceTree = "<group>"; };
+		05C490EB26D270AF0072DDC0 /* TVShowDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetailRouter.swift; sourceTree = "<group>"; };
+		05C490ED26D27A8C0072DDC0 /* TVShowsRouter+TransitiononingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TVShowsRouter+TransitiononingDelegate.swift"; sourceTree = "<group>"; };
+		05EFD53A26D00B90005D268F /* TVMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05EFD53D26D00B90005D268F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		05EFD54126D00B90005D268F /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		05EFD54426D00B91005D268F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05EFD54626D00B98005D268F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05EFD54926D00B98005D268F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05EFD54B26D00B98005D268F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05EFD55026D00B98005D268F /* TVMazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVMazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05EFD55426D00B98005D268F /* TVShowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowTests.swift; sourceTree = "<group>"; };
+		05EFD55626D00B98005D268F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05EFD55B26D00B98005D268F /* TVMazeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVMazeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05EFD55F26D00B98005D268F /* TVMazeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeUITests.swift; sourceTree = "<group>"; };
+		05EFD56126D00B98005D268F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05EFD56F26D00EE4005D268F /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		05EFD57126D00EF8005D268F /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		05EFD57326D00F18005D268F /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		05EFD57526D00F30005D268F /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
+		05EFD57726D00F4A005D268F /* ViewModelDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDataSourceProtocol.swift; sourceTree = "<group>"; };
+		05EFD57926D00F5F005D268F /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		05EFD58026D0831A005D268F /* TVShowsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsBuilder.swift; sourceTree = "<group>"; };
+		05EFD58226D08324005D268F /* TVShowsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsRouter.swift; sourceTree = "<group>"; };
+		05EFD58426D08331005D268F /* TVShowsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsViewModel.swift; sourceTree = "<group>"; };
+		05EFD58626D0836A005D268F /* TVShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsViewController.swift; sourceTree = "<group>"; };
+		05EFD58826D08376005D268F /* TVShowsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TVShowsViewController.storyboard; sourceTree = "<group>"; };
+		05EFD59C26D09F60005D268F /* TVShowItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowItemTableViewCell.swift; sourceTree = "<group>"; };
+		05EFD59D26D09F60005D268F /* TVShowItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVShowItemTableViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05EFD53726D00B90005D268F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0547E3C426D1BAFE004CB20E /* Lottie in Frameworks */,
+				05EFD59026D08662005D268F /* RxSwift in Frameworks */,
+				05EFD59426D08662005D268F /* RxCocoa in Frameworks */,
+				05EFD59B26D09684005D268F /* SDWebImage in Frameworks */,
+				05EFD57E26D010C1005D268F /* tvmaze-network in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05EFD54D26D00B98005D268F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05EFD55826D00B98005D268F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0547E3C526D1BBDE004CB20E /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				0547E3C626D1BBEF004CB20E /* like.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		0547E3CD26D20185004CB20E /* TVFavoriteShows */ = {
+			isa = PBXGroup;
+			children = (
+				0547E3D026D201C7004CB20E /* TVFavoriteShowsBuilder.swift */,
+				0547E3D226D201CE004CB20E /* TVFavoriteShowsRouter.swift */,
+				0547E3D426D201D5004CB20E /* TVFavoriteShowsViewModel.swift */,
+			);
+			path = TVFavoriteShows;
+			sourceTree = "<group>";
+		};
+		0547E3CE26D20198004CB20E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0547E3CF26D2019F004CB20E /* UI */,
+				054A98F426D22C99009F0938 /* TVMaze+Colors.swift */,
+				0594259726D28963003A47F4 /* UIViewController+Common.swift */,
+				0594259926D28F12003A47F4 /* String+HTML.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0547E3CF26D2019F004CB20E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				05EFD58626D0836A005D268F /* TVShowsViewController.swift */,
+				05EFD58826D08376005D268F /* TVShowsViewController.storyboard */,
+				05EFD59C26D09F60005D268F /* TVShowItemTableViewCell.swift */,
+				05EFD59D26D09F60005D268F /* TVShowItemTableViewCell.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0547E3D626D20A35004CB20E /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0547E3D726D20A7C004CB20E /* TVMazeViewController.swift */,
+				0547E3DB26D20B10004CB20E /* TabBarBuilder.swift */,
+				0547E3DD26D20B65004CB20E /* TabBarRouter.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		054A98F626D233BC009F0938 /* TVShowDetail */ = {
+			isa = PBXGroup;
+			children = (
+				05C490E926D270A20072DDC0 /* TVShowDetailBuilder.swift */,
+				05C490EB26D270AF0072DDC0 /* TVShowDetailRouter.swift */,
+				05C490E326D24ECB0072DDC0 /* TVShowDetailViewModel.swift */,
+				05C490E526D24EEB0072DDC0 /* TVShowDetailViewController.swift */,
+				05C490E726D24F0C0072DDC0 /* TVShowDetailViewController.storyboard */,
+			);
+			path = TVShowDetail;
+			sourceTree = "<group>";
+		};
+		054A98F926D23876009F0938 /* TVFavoriteShowTests */ = {
+			isa = PBXGroup;
+			children = (
+				054A98F726D2379F009F0938 /* TVFavoriteShowTests.swift */,
+				054A98FA26D23890009F0938 /* TVFavoriteViewModelTests.swift */,
+			);
+			path = TVFavoriteShowTests;
+			sourceTree = "<group>";
+		};
+		054A98FC26D23D9C009F0938 /* TVShows */ = {
+			isa = PBXGroup;
+			children = (
+				05EFD55426D00B98005D268F /* TVShowTests.swift */,
+				054A98FD26D23DCE009F0938 /* TVShowsViewModelTests.swift */,
+			);
+			path = TVShows;
+			sourceTree = "<group>";
+		};
+		05EFD53126D00B90005D268F = {
+			isa = PBXGroup;
+			children = (
+				05EFD53C26D00B90005D268F /* TVMaze */,
+				05EFD55326D00B98005D268F /* TVMazeTests */,
+				05EFD55E26D00B98005D268F /* TVMazeUITests */,
+				05EFD53B26D00B90005D268F /* Products */,
+				05EFD58D26D085BE005D268F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		05EFD53B26D00B90005D268F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05EFD53A26D00B90005D268F /* TVMaze.app */,
+				05EFD55026D00B98005D268F /* TVMazeTests.xctest */,
+				05EFD55B26D00B98005D268F /* TVMazeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05EFD53C26D00B90005D268F /* TVMaze */ = {
+			isa = PBXGroup;
+			children = (
+				0547E3CE26D20198004CB20E /* Common */,
+				0547E3C526D1BBDE004CB20E /* Animations */,
+				05EFD56E26D00ED6005D268F /* MVVM */,
+				05EFD57B26D00F81005D268F /* Modules */,
+				05EFD53D26D00B90005D268F /* AppDelegate.swift */,
+				05EFD54126D00B90005D268F /* LaunchViewController.swift */,
+				05EFD54326D00B91005D268F /* Main.storyboard */,
+				05EFD54626D00B98005D268F /* Assets.xcassets */,
+				054A98F226D22C22009F0938 /* Color.xcassets */,
+				05EFD54826D00B98005D268F /* LaunchScreen.storyboard */,
+				05EFD54B26D00B98005D268F /* Info.plist */,
+			);
+			path = TVMaze;
+			sourceTree = "<group>";
+		};
+		05EFD55326D00B98005D268F /* TVMazeTests */ = {
+			isa = PBXGroup;
+			children = (
+				054A98FC26D23D9C009F0938 /* TVShows */,
+				054A98F926D23876009F0938 /* TVFavoriteShowTests */,
+				05EFD55626D00B98005D268F /* Info.plist */,
+			);
+			path = TVMazeTests;
+			sourceTree = "<group>";
+		};
+		05EFD55E26D00B98005D268F /* TVMazeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				05EFD55F26D00B98005D268F /* TVMazeUITests.swift */,
+				05EFD56126D00B98005D268F /* Info.plist */,
+			);
+			path = TVMazeUITests;
+			sourceTree = "<group>";
+		};
+		05EFD56E26D00ED6005D268F /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				05EFD56F26D00EE4005D268F /* Builder.swift */,
+				05EFD57126D00EF8005D268F /* Context.swift */,
+				05EFD57326D00F18005D268F /* RouterProtocol.swift */,
+				05EFD57526D00F30005D268F /* ViewControllerProtocol.swift */,
+				05EFD57726D00F4A005D268F /* ViewModelDataSourceProtocol.swift */,
+				05EFD57926D00F5F005D268F /* ViewModelProtocol.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		05EFD57B26D00F81005D268F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				054A98F626D233BC009F0938 /* TVShowDetail */,
+				0547E3D626D20A35004CB20E /* TabBar */,
+				0547E3CD26D20185004CB20E /* TVFavoriteShows */,
+				05EFD57F26D082E6005D268F /* TVShows */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		05EFD57F26D082E6005D268F /* TVShows */ = {
+			isa = PBXGroup;
+			children = (
+				05EFD58026D0831A005D268F /* TVShowsBuilder.swift */,
+				05EFD58226D08324005D268F /* TVShowsRouter.swift */,
+				05EFD58426D08331005D268F /* TVShowsViewModel.swift */,
+				05C490ED26D27A8C0072DDC0 /* TVShowsRouter+TransitiononingDelegate.swift */,
+			);
+			path = TVShows;
+			sourceTree = "<group>";
+		};
+		05EFD58D26D085BE005D268F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05EFD53926D00B90005D268F /* TVMaze */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05EFD56426D00B98005D268F /* Build configuration list for PBXNativeTarget "TVMaze" */;
+			buildPhases = (
+				05EFD53626D00B90005D268F /* Sources */,
+				05EFD53726D00B90005D268F /* Frameworks */,
+				05EFD53826D00B90005D268F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TVMaze;
+			packageProductDependencies = (
+				05EFD57D26D010C1005D268F /* tvmaze-network */,
+				05EFD58F26D08662005D268F /* RxSwift */,
+				05EFD59326D08662005D268F /* RxCocoa */,
+				05EFD59A26D09684005D268F /* SDWebImage */,
+				0547E3C326D1BAFE004CB20E /* Lottie */,
+			);
+			productName = TVMaze;
+			productReference = 05EFD53A26D00B90005D268F /* TVMaze.app */;
+			productType = "com.apple.product-type.application";
+		};
+		05EFD54F26D00B98005D268F /* TVMazeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05EFD56726D00B98005D268F /* Build configuration list for PBXNativeTarget "TVMazeTests" */;
+			buildPhases = (
+				05EFD54C26D00B98005D268F /* Sources */,
+				05EFD54D26D00B98005D268F /* Frameworks */,
+				05EFD54E26D00B98005D268F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05EFD55226D00B98005D268F /* PBXTargetDependency */,
+			);
+			name = TVMazeTests;
+			productName = TVMazeTests;
+			productReference = 05EFD55026D00B98005D268F /* TVMazeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		05EFD55A26D00B98005D268F /* TVMazeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05EFD56A26D00B98005D268F /* Build configuration list for PBXNativeTarget "TVMazeUITests" */;
+			buildPhases = (
+				05EFD55726D00B98005D268F /* Sources */,
+				05EFD55826D00B98005D268F /* Frameworks */,
+				05EFD55926D00B98005D268F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05EFD55D26D00B98005D268F /* PBXTargetDependency */,
+			);
+			name = TVMazeUITests;
+			productName = TVMazeUITests;
+			productReference = 05EFD55B26D00B98005D268F /* TVMazeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05EFD53226D00B90005D268F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					05EFD53926D00B90005D268F = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					05EFD54F26D00B98005D268F = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 05EFD53926D00B90005D268F;
+					};
+					05EFD55A26D00B98005D268F = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 05EFD53926D00B90005D268F;
+					};
+				};
+			};
+			buildConfigurationList = 05EFD53526D00B90005D268F /* Build configuration list for PBXProject "TVMaze" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05EFD53126D00B90005D268F;
+			packageReferences = (
+				05EFD57C26D010C1005D268F /* XCRemoteSwiftPackageReference "tvmaze-network" */,
+				05EFD58E26D08662005D268F /* XCRemoteSwiftPackageReference "RxSwift" */,
+				05EFD59926D09684005D268F /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				0547E3C226D1BAFD004CB20E /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			productRefGroup = 05EFD53B26D00B90005D268F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05EFD53926D00B90005D268F /* TVMaze */,
+				05EFD54F26D00B98005D268F /* TVMazeTests */,
+				05EFD55A26D00B98005D268F /* TVMazeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05EFD53826D00B90005D268F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05EFD54A26D00B98005D268F /* LaunchScreen.storyboard in Resources */,
+				05C490E826D24F0C0072DDC0 /* TVShowDetailViewController.storyboard in Resources */,
+				0547E3C726D1BBEF004CB20E /* like.json in Resources */,
+				05EFD54726D00B98005D268F /* Assets.xcassets in Resources */,
+				05EFD54526D00B91005D268F /* Main.storyboard in Resources */,
+				054A98F326D22C22009F0938 /* Color.xcassets in Resources */,
+				05EFD59F26D09F60005D268F /* TVShowItemTableViewCell.xib in Resources */,
+				05EFD58926D08376005D268F /* TVShowsViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05EFD54E26D00B98005D268F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05EFD55926D00B98005D268F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05EFD53626D00B90005D268F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C490E626D24EEB0072DDC0 /* TVShowDetailViewController.swift in Sources */,
+				05EFD57A26D00F5F005D268F /* ViewModelProtocol.swift in Sources */,
+				05EFD57626D00F30005D268F /* ViewControllerProtocol.swift in Sources */,
+				0547E3D826D20A7C004CB20E /* TVMazeViewController.swift in Sources */,
+				05C490EE26D27A8C0072DDC0 /* TVShowsRouter+TransitiononingDelegate.swift in Sources */,
+				0594259826D28963003A47F4 /* UIViewController+Common.swift in Sources */,
+				05EFD57826D00F4A005D268F /* ViewModelDataSourceProtocol.swift in Sources */,
+				0547E3D526D201D5004CB20E /* TVFavoriteShowsViewModel.swift in Sources */,
+				05C490EA26D270A20072DDC0 /* TVShowDetailBuilder.swift in Sources */,
+				05EFD54226D00B90005D268F /* LaunchViewController.swift in Sources */,
+				054A98F526D22C99009F0938 /* TVMaze+Colors.swift in Sources */,
+				0547E3D126D201C7004CB20E /* TVFavoriteShowsBuilder.swift in Sources */,
+				05EFD57226D00EF8005D268F /* Context.swift in Sources */,
+				05EFD58526D08331005D268F /* TVShowsViewModel.swift in Sources */,
+				05EFD58326D08324005D268F /* TVShowsRouter.swift in Sources */,
+				0594259A26D28F12003A47F4 /* String+HTML.swift in Sources */,
+				05EFD58726D0836A005D268F /* TVShowsViewController.swift in Sources */,
+				0547E3DC26D20B10004CB20E /* TabBarBuilder.swift in Sources */,
+				05EFD57426D00F18005D268F /* RouterProtocol.swift in Sources */,
+				05EFD58126D0831A005D268F /* TVShowsBuilder.swift in Sources */,
+				05C490E426D24ECB0072DDC0 /* TVShowDetailViewModel.swift in Sources */,
+				05C490EC26D270AF0072DDC0 /* TVShowDetailRouter.swift in Sources */,
+				0547E3DE26D20B65004CB20E /* TabBarRouter.swift in Sources */,
+				05EFD53E26D00B90005D268F /* AppDelegate.swift in Sources */,
+				05EFD57026D00EE4005D268F /* Builder.swift in Sources */,
+				05EFD59E26D09F60005D268F /* TVShowItemTableViewCell.swift in Sources */,
+				0547E3D326D201CE004CB20E /* TVFavoriteShowsRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05EFD54C26D00B98005D268F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				054A98FB26D23890009F0938 /* TVFavoriteViewModelTests.swift in Sources */,
+				054A98F826D2379F009F0938 /* TVFavoriteShowTests.swift in Sources */,
+				05EFD55526D00B98005D268F /* TVShowTests.swift in Sources */,
+				054A98FE26D23DCE009F0938 /* TVShowsViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05EFD55726D00B98005D268F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05EFD56026D00B98005D268F /* TVMazeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05EFD55226D00B98005D268F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05EFD53926D00B90005D268F /* TVMaze */;
+			targetProxy = 05EFD55126D00B98005D268F /* PBXContainerItemProxy */;
+		};
+		05EFD55D26D00B98005D268F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05EFD53926D00B90005D268F /* TVMaze */;
+			targetProxy = 05EFD55C26D00B98005D268F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05EFD54326D00B91005D268F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05EFD54426D00B91005D268F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		05EFD54826D00B98005D268F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05EFD54926D00B98005D268F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05EFD56226D00B98005D268F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		05EFD56326D00B98005D268F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05EFD56526D00B98005D268F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7ZAVQF67Q;
+				INFOPLIST_FILE = TVMaze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.olmedo.isaac.TVMaze;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		05EFD56626D00B98005D268F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7ZAVQF67Q;
+				INFOPLIST_FILE = TVMaze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.olmedo.isaac.TVMaze;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		05EFD56826D00B98005D268F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7ZAVQF67Q;
+				INFOPLIST_FILE = TVMazeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.olmedo.isaac.TVMazeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVMaze.app/TVMaze";
+			};
+			name = Debug;
+		};
+		05EFD56926D00B98005D268F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7ZAVQF67Q;
+				INFOPLIST_FILE = TVMazeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.olmedo.isaac.TVMazeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVMaze.app/TVMaze";
+			};
+			name = Release;
+		};
+		05EFD56B26D00B98005D268F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7ZAVQF67Q;
+				INFOPLIST_FILE = TVMazeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.olmedo.isaac.TVMazeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TVMaze;
+			};
+			name = Debug;
+		};
+		05EFD56C26D00B98005D268F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C7ZAVQF67Q;
+				INFOPLIST_FILE = TVMazeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.olmedo.isaac.TVMazeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TVMaze;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05EFD53526D00B90005D268F /* Build configuration list for PBXProject "TVMaze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05EFD56226D00B98005D268F /* Debug */,
+				05EFD56326D00B98005D268F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05EFD56426D00B98005D268F /* Build configuration list for PBXNativeTarget "TVMaze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05EFD56526D00B98005D268F /* Debug */,
+				05EFD56626D00B98005D268F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05EFD56726D00B98005D268F /* Build configuration list for PBXNativeTarget "TVMazeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05EFD56826D00B98005D268F /* Debug */,
+				05EFD56926D00B98005D268F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05EFD56A26D00B98005D268F /* Build configuration list for PBXNativeTarget "TVMazeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05EFD56B26D00B98005D268F /* Debug */,
+				05EFD56C26D00B98005D268F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0547E3C226D1BAFD004CB20E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.3;
+			};
+		};
+		05EFD57C26D010C1005D268F /* XCRemoteSwiftPackageReference "tvmaze-network" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:isaacolmedo/tvmaze-network.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+		05EFD58E26D08662005D268F /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+		05EFD59926D09684005D268F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0547E3C326D1BAFE004CB20E /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0547E3C226D1BAFD004CB20E /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		05EFD57D26D010C1005D268F /* tvmaze-network */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05EFD57C26D010C1005D268F /* XCRemoteSwiftPackageReference "tvmaze-network" */;
+			productName = "tvmaze-network";
+		};
+		05EFD58F26D08662005D268F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05EFD58E26D08662005D268F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		05EFD59326D08662005D268F /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05EFD58E26D08662005D268F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		05EFD59A26D09684005D268F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05EFD59926D09684005D268F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 05EFD53226D00B90005D268F /* Project object */;
+}
